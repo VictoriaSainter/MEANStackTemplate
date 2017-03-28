@@ -1,0 +1,26 @@
+{
+  "name": "meanstacktemplate",
+  "version": "0.0.1",
+  "description": "A MEAN stack template to base Mongo, Express, Angular, and Node projects off for a quick start",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictoriaSainter/MEANStackTemplate.git"
+  },
+  "author": "Victoria Leftwich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VictoriaSainter/MEANStackTemplate/issues"
+  },
+  "homepage": "https://github.com/VictoriaSainter/MEANStackTemplate#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "mongodb": "^2.1.18",
+    "mongoskin": "^2.1.0",
+    "morgan": "^1.7.0"
+  }
+}
