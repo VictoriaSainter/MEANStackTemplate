@@ -1,0 +1,19 @@
+#meanLogo {
+    width: 30%;
+    float: left;
+    padding: 10px;
+}
+
+.navbar-default {
+    background-color: #323332;
+    font-size: 20px;
+}
+.navbar-default .nav li a:hover {
+    background-color: #818181;
+    color: white;
+}
+
+.nav li a {
+    background-color: #515151;
+    padding: 30px;
+}

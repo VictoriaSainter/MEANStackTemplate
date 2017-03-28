@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="meanTemplate" ng-controller="IndexController">
+
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./resources/css/style.css" rel="stylesheet">
+
+    <title>Mean Template</title>
+
+</head>
+
+<body>
+    <!--This is the navigation bar at the top of the page and is static and standard at all times-->
+
+    <div class='navbar navbar-default navbar-static-top'>
+        <div class='container'>
+            <div class="navbar-header">
+                <!--This is a toggle button that can be used on mobile devices when the screen size is smaller. Only visible on smaller screens (screen size standard set by bootstrap)-->
+                <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='.navbar-collapse'>
+                    <span class='sr-only'>Toggle navigation</span>
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+                </button>
+
+                <!--this is the labs logo image-->
+                <a href="/"><img id="meanLogo" src="resources/images/mean-stack-logo.jpg"/></a>
+                </div>
+
+            <!--this is the links on the navigation bar -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li ng-class="{ active: isActive('/AddNewUser')}"><a href="/AddNewUser">Add New User</a></li>
+                    <li ng-class="{ active: isActive('/ListOfUsers')}"><a href="/ListOfUsers">List Of Users</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--This is where the unique content is injected (views) -->
+        <ng-view></ng-view>
+
+
+</body>
+
+<!--this is where all the different files are imported either from the project (e.g. src="./app.js") or from a content delivery network hosting files e.g. src="//ajax..." -->
+<!--it is very important the order that the files are loaded. You need to think about what file has a dependency on another -->
+
+<!--vendor-->
+<script src="//code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+
+
+<!--app-->
+<script src="./app.js"></script>
+<script src="./routes.js"></script>
+
+
+<!--services-->
+<script src="app/services/UserService.js"></script>
+
+<!--directive-->
+
+
+<!--controllers-->
+<script src="app/controllers/AddNewUserController.js"></script>
+<script src="app/controllers/ListOfUsersController.js"></script>
+<script src="app/controllers/IndexController.js"></script>
+
+
+<!--filters-->
+
+
+</html>

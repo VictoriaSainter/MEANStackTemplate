@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10 col-sm-12">
+            <!--Creates a table that goes through each of the users in the table retrieved from the mongodb-->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Comment</th>
+                    </tr>
+                </thead>
+
+                <tr ng-repeat="user in users">
+                    <td>{{user.name}}</td>
+                    <td>{{user.age}}</td>
+                    <td>{{user.comments}}</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+
